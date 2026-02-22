@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+🎮 Jogo da Velha (Tic-Tac-Toe) — React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido como meu primeiro contato com React e TypeScript.
 
-Currently, two official plugins are available:
+O objetivo foi entender na prática os conceitos fundamentais da biblioteca, utilizando como base a documentação oficial do React:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 https://react.dev/learn/tutorial-tic-tac-toe
 
-## React Compiler
+🚀 Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React
 
-## Expanding the ESLint configuration
+TypeScript
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Vite
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+CSS
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+📚 O que aprendi neste projeto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Durante o desenvolvimento, pratiquei e compreendi:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+✔ Componentes Funcionais
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+✔ Props
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+✔ useState
+
+✔ Elevação de estado (Lifting State Up)
+
+✔ Imutabilidade de arrays
+
+✔ Renderização condicional
+
+✔ Manipulação de eventos
+
+✔ Tipagem com TypeScript em componentes React
+
+✔ Organização básica de estrutura de projeto
+
+🧠 Conceitos importantes aplicados
+🔹 Estado e Histórico de Jogadas
+
+O projeto implementa:
+
+Armazenamento do histórico de jogadas
+
+Navegação entre movimentos anteriores
+
+Cálculo automático do vencedor
+
+Isso ajudou a entender como o React lida com re-renderização baseada em estado.
+
+🔹 Tipagem com TypeScript
+
+Foram criadas interfaces para tipagem das props:
+
+interface SquareProps {
+  value: string | null;
+  onSquareClick: () => void;
+}
+
+Esse foi meu primeiro contato prático com TypeScript aplicado ao React.
+
+📂 Estrutura do Projeto
+src/
+ ├── App.tsx
+ ├── main.tsx
+ ├── index.css
+ └── components (estrutura modular futura)
+🎯 Objetivo do Projeto
+
+Este projeto teve como foco:
+
+Entender como o React funciona internamente
+
+Compreender fluxo de dados entre componentes
+
+Praticar organização de estado
+
+Dar o primeiro passo na migração para desenvolvimento front-end
+
+🛠 Como rodar o projeto
+npm install
+npm run dev
+📈 Próximos Passos
+
+Como evolução, pretendo:
+
+Melhorar a interface
+
+Separar componentes em arquivos individuais
+
+Aplicar boas práticas de organização
+
+Criar novos projetos com CRUD e integração com API
+
+📌 Observação
+
+Este projeto foi desenvolvido como parte do meu processo de transição da área de Infraestrutura para Desenvolvimento, marcando meu primeiro contato prático com React e TypeScript.
